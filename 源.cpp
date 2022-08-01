@@ -1,29 +1,16 @@
-#define _CRT_SECURE_NO_WARNINGS 1
 #include<stdio.h>
 int main()
-{
+{	
 	int a = 0;
-	int b = 0;
-	int c = 0;
-	scanf("%d %d %d", &a, &b, &c);
-	if (a < b)
+	double b = 0.0;
+	double c = 0.0;
+	int i = 1;
+	for (a = 1; a <= 100; a++)
 	{
-		int aa = a;
-		 a = b;
-		 b = aa;
-     }
-	if (a < c)
-	{
-		int bb = a;
-		a = c;
-		c = bb;
-     }
-	if (b < c)
-	{
-		int cc = b;
-		b = c;
-		c = cc;
-	 }
-	printf("%d %d %d", a, b, c);
+		c = 1.0 / a;
+		b = b + c * i;
+		i = -i;
+	}
+	printf("%f\n", b);
 	return 0;
 }
